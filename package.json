@@ -1,0 +1,11 @@
+{
+  "name": "learnjs",
+  "version": "1.0.0",
+  "description": "Learning Js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Sobhit Kumar",
+  "license": "ISC"
+}
