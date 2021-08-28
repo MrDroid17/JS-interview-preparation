@@ -5,22 +5,22 @@
 /**
  * basic use of call function - example 1
  */
-let captainAmerica = {
-    firstname: "Steve",
-    lastname: "Rogers",
-    printAlias: function(){
-        console.log(this.firstname + " " + this.lastname + " is the Captain America.");
-    }
-}
+// let captainAmerica = {
+//     firstname: "Steve",
+//     lastname: "Rogers",
+//     printAlias: function(){
+//         console.log(this.firstname + " " + this.lastname + " is the Captain America.");
+//     }
+// }
 
-captainAmerica.printAlias()
+// captainAmerica.printAlias()
 
-let captainAmerica2 = {
-    firstname: "Sam",
-    lastname: "Wilson"
-}
+// let captainAmerica2 = {
+//     firstname: "Sam",
+//     lastname: "Wilson"
+// }
 
-captainAmerica.printAlias.call(captainAmerica2);
+// captainAmerica.printAlias.call(captainAmerica2);
 
 /**
  * basic use of call function - example 2
@@ -67,9 +67,41 @@ printAliasOffirstAvenger2('New York');
 
 /**
  * Currying
- * Can be achieved by 
+ * Can be achieved by closures and bind method
  */
+// with bind
+// let multiply = function(x, y) {
+//     console.log(x * y);
+// }
+
+// let multiplyByTwo = multiply.bind(this, 2);
+// multiplyByTwo(3);
 
 
+// let multiplyByThree = multiply.bind(this, 3);
+// multiplyByThree(5);
+
+
+//function closure`
+
+let multiply = function (x) {
+    return function (y) {
+        console.log(x * y);
+    }
+}
+
+let multiplyByTwo = multiply(2);
+multiplyByTwo(3);
+
+let multiplyByThree = multiply(3);
+multiplyByThree(5);
+
+
+/**
+ * Async and defer are boolean attributes
+ * 3 senarios - script tags, async attribute in a script tag, defer attribute in script tag
+ * 2 major thing in broweser happen
+ * 
+ */
 
 
