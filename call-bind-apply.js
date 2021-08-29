@@ -1,5 +1,7 @@
 'use-strict'
 /**
+ * @link https://www.youtube.com/watch?v=75W8UPQ5l7k&list=PLlasXeu85E9eLVlWFs-nz5PKXJU4f7Fks
+ *
  * Call bind apply
  */
 /**
@@ -24,6 +26,7 @@
 
 /**
  * basic use of call function - example 2
+ * by using call you can borrow function from another object - function borrowing
  */
 
  let captainAmerica = {
@@ -65,43 +68,18 @@ let printAliasOffirstAvenger2 = printAlias.myBind(captainAmerica2, "Louisiana");
 printAliasOffirstAvenger2('New York');
 
 
-/**
- * Currying
- * Can be achieved by closures and bind method
- */
-// with bind
-// let multiply = function(x, y) {
-//     console.log(x * y);
-// }
-
-// let multiplyByTwo = multiply.bind(this, 2);
-// multiplyByTwo(3);
-
-
-// let multiplyByThree = multiply.bind(this, 3);
-// multiplyByThree(5);
-
-
-//function closure`
-
-let multiply = function (x) {
-    return function (y) {
-        console.log(x * y);
-    }
-}
-
-let multiplyByTwo = multiply(2);
-multiplyByTwo(3);
-
-let multiplyByThree = multiply(3);
-multiplyByThree(5);
-
 
 /**
  * Async and defer are boolean attributes
  * 3 senarios - script tags, async attribute in a script tag, defer attribute in script tag
  * 2 major thing in broweser happen
+ * first - html parsing
+ * second - fetching data from api and excuting html line by line
  * 
+ */
+
+/**
+ * event bubbling and event capturing(or trickling) and event delegation
  */
 
 
