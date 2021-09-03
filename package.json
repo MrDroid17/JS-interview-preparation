@@ -2,9 +2,9 @@
   "name": "learnjs",
   "version": "1.0.0",
   "description": "Learning Js",
-  "main": "index.js",
+  "main": "11_callback.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node 11_callback.js"
   },
   "author": "Sobhit Kumar",
   "license": "ISC"
