@@ -48,4 +48,28 @@
  * @link https://www.youtube.com/watch?v=-jeoyDJDsSM&ab_channel=Questpond
  */
 
+/**
+ * Reason for slow angualr app
+ * @link https://blog.bitsrc.io/top-reasons-why-your-angular-app-is-slow-c36780a0a289
+ * 
+    * make sure you use ChangeDetection.OnPush and TrackBy for arrays
+    * Render less often by surgically triggering change detections on your components. Run outside Zone when needed.
+    * Try to render less using a variety of techniques such as virtual scrolling and lazy rendering
+    * Don’t listen to everything: subscribe to only the items that are visible, and subscribe to only one global event listener
+        * Micro-optimizations
+            * se a Custom Iterable Differ
+            * Turn everything into for-loops, scrap filter, reduce and map. Use break and continue to reduce the number of iterations
+            * Maintain the shape of your objects. Learn more about how Angular is so fast watching this video from Misko Hevery
+            * 
+            
+    How we make Angular fast: 
+    @link https://www.youtube.com/watch?v=EqSRpkMRyY4&ab_channel=AngularConnect
+    * inlinig - opt deopt
+    * VM - virtual machine -- VM layout objects -- how ivy does things
+    * take object having property and put them in array  by seperating keys and values and storing them in different array
+    * 
+    *  
+    @link https://www.youtube.com/watch?v=Tlmx1PbP8Qw&t=6s&ab_channel=AngularConnect
+ */
+
 
