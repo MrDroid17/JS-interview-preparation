@@ -56,15 +56,15 @@ x();
  *  loop with setTimeout
  * issue with below example because of closure will remeber latest value
  */
-//  function x(){
-//     for (let i=1; i<= 5; i++){
-//         setTimeout(function (){
-//             console.log(i)
-//         }, i*1000)
-//     }
-//     console.log("Namaste JavaScript");
-// }
-// x();
+function x() {
+    for (let i = 1; i <= 5; i++) {
+        setTimeout(function () {
+            console.log(i)
+        }, i * 1000)
+    }
+    console.log("Namaste JavaScript");
+}
+x();
 
 
 /**

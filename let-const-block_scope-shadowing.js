@@ -1,8 +1,11 @@
 /**
  * Let and Const are also being hoisted but they are hoisted differently
- * but they are not hoisted in global scope instead it is in Temporal dead zone.
- * and it can only be accessed once variable is intialized.
+ * but they are not hoisted in global scope instead it is in Temporal dead zone.(inside Scripts)
+ * let does not is attached a
+ * and it can only be accessed after variable is intialized.
  * Keep your let and const on top  -- use it there
+ * if there is syntax error javascript upfront stop executing
+ * error -- Syntax error, type error, reference error
  *
  */
 
