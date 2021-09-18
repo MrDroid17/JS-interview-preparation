@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    Debouncing && Throttling
+  </div>
+  <!--
+  When the key is first pressed, the keydown event is sent.
+  If the key is not a modifier key, the keypress event is sent.  -- This event was highly device-dependent and is obsolete. this is bsolete should not use
+  When the user releases the key, the keyup event is sent. 
+  --> 
+  <input type="text" onkeyup="debouncing()">
+  <!--
+    Throttling 
+  -->
+  <button id="clickMe">Click Me</button>
+
+
+
+
+  <script src="index.js"></script>
+</body>
+
+</html>
