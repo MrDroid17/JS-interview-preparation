@@ -74,3 +74,9 @@ z(); // this will output in 100 //  b wont be garbage collected
       Some high-level languages, such as JavaScript, utilize a form of automatic memory management known as garbage collection (GC). The purpose of a garbage collector is to monitor memory allocation and determine when a block of allocated memory is no longer needed and reclaim it. This automatic process is an approximation since the general problem of determining whether or not a specific piece of memory is still needed is undecidable.
 
  */
+
+/**
+ * Closure crazy interview
+ * advantage - data-hiding and encapsulation
+ * disadvantage - closure take a lot of memory as it keeps value of all its varialble maintain
+ */
