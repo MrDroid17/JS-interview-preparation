@@ -1,10 +1,15 @@
 /**
  * #1 
  * get count of all albhabet use in a string
+ * exmaple:
+ * input:
+ * str =  'hello world'
  * 
- *
+ * output:
+ *{"h": 1: "e":1, "l": 3, "o": 2, " ": 1, "w": 1, "r": 1, "d": 1}
+
  */
-function getOcc(str) {
+function getOccuranceCount(str) {
   let result = {};
   for (let i = 0; i < str.length; i++) {
     if (result.hasOwnProperty(str[i])) {
@@ -17,7 +22,7 @@ function getOcc(str) {
   // your code
   return result
 }
-console.log(getOcc('Go with the flow'));
+console.log(getOccuranceCount('Go with the flow'));
 
 
 /**
@@ -87,3 +92,42 @@ function findVal(arr, x) {
 }
 
 console.log(findVal([0, -1, 2, -3, 1], -2));
+
+
+/**
+ * Find the largest pair sum in an unsorted array
+ */
+
+function getLargestPairSum(arr) {
+  let first_number, second_number;
+
+  if (arr[0] > arr[1]) {
+    first_number = arr[0];
+    second_number = arr[1];
+  } else {
+    first_number = arr[1];
+    second_number = arr[0];
+  }
+
+  for (let i = 2; i < arr.length; i++) {
+    if (arr[i] > first_number) {
+      second_number = first_number;
+      first_number = arr[i];
+    } else if (arr[i] > second_number && arr[i] != first_number) {
+      second_number = arr[i]
+    }
+  }
+  console.log(`Sum of ${first_number} and ${second_number} is ${first_number + second_number}`);
+}
+let arr_of_number = [8, 10, 11, 15, 14, 13, 12];
+getLargestPairSum(arr_of_number);
+
+/**
+ * Write a function to to sum numbers until it has no parameter
+ * sum(3)(4)(5)(3)(4)....()
+ * 
+ */
+
+let sum = a => b => b ? sum(a + b) : a;
+
+console.log(sum(10)(20)(3)(4)());
