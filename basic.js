@@ -25,3 +25,25 @@ var getName = () => {
 }
 
 // JavaScript also create windows - is a global object get created with global execution context 
+
+
+
+
+/**
+ * # string substr() and substring() method difference
+  * substr --> substr() method extracts parts of a string, beginning at the character at the specified position, and returns the specified number of characters.
+      string.substr(start, length);
+      var s = "JavaScript";
+      var st = s.substr(4, 6);
+      alert(st);
+
+    substring --> returns the part of the string between the start and end indexes, or to the end of the string.
+    string.substring(start, end)
+    var s = "JavaScript";
+    var st = s.substring(4, 10);
+    alert(st);
+
+     #Moreover, substr() accepts a negative starting position as an offset from the end of the string. substring() does not.
+ * 
+ */
+
