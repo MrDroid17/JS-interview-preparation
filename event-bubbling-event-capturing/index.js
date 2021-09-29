@@ -5,7 +5,7 @@
  *
  * addEvenHandler('click', ()=>{}, useCapture);
  * useCapture is a boolean
- * default is false, false represents event bubbling up
+ * default is false, false represents event bubbling up or tricking up
  * default is true, true represents event capturing or trickling down
  */
 

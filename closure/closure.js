@@ -6,7 +6,7 @@
  * Module design pattern
  * currying
  * function like once
- * memoize
+ * memozize
  * maintaining state in async world
  * setTimeout()
  * Iterators etc.
