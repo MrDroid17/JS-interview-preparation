@@ -78,3 +78,5 @@ For more details : [CSS Position](https://www.w3schools.com/css/css_positioning.
 > For CSS Interview Questions 30+ : [click here](https://www.interviewbit.com/css-interview-questions/)
 > 
 > For HTML Interview Questions 60+ : [click here](https://www.interviewbit.com/html-interview-questions/)
+> 
+> For Angular Interview Questions 60+ : [click here](https://www.interviewbit.com/angular-interview-questions/)
