@@ -73,3 +73,86 @@
  */
 
 
+/**
+ *  Directives: Help you to attach behaviour with html - change behaviour of HTML DOM
+ * [hidden], {{value}}, [ngclass], [ngstyle], [(ngModel)]
+ * 
+    three type: 
+        * Structural - add or remove new element *ngFor, *ngIf, *ngSwitch
+        * Attribute - change  the behaviour and lokk and feel of elelment ngClass, ngStyle
+        * Component - custom component  - custome template - directive templates- user control - self contained directives
+ * 
+ * 
+ * routing - is  a collection - having path and component can also have authguard like canActivate
+    * let routes = [
+    * { path: '', component: HomeComponent}
+    * ]
+    * <router-outlet><router-outlet>
+    * [routerLink]= "['']"
+    * this.route.navigate(['/Home'])
+    * 
+    * 
+ * Lazy loading: - on demand loading
+    * Suppose - if you have multiple module  - Home and customer - customer module only load when it needed
+    * How it can be achieved by using two things:
+        * Divede your project in seperate separe modules
+        * You need two use loadChildren in routes collection and provide module path 
+ * 
+ * Services in Angular: 
+ * Dependency Injection:  - 
+    * application design pattern rather than creating   object instances from whithin the component, Angualr injects it via the constructor
+        * In angualr ned to use Provider
+        * {provide: baseLogger, useClass: base class}
+        * 
+        * Benefits:
+        * Decoupling -you can change at one place you dont have to make changes to other places
+    * 
+: ng Build and ng serve
+ng serve- build in memory
+ng-build - build in hard disk in dist folder 
+--prod build for production - like minifying and removing comment and unused code
+
+*  @HostBinding and @HostLister()
+@link tutorials https://www.youtube.com/watch?v=nRrbYGXE8xQ&ab_channel=Geek97
+code to play - https://stackblitz.com/edit/ngindia?file=src%2Fapp%2FDemo.directive.ts
+*Steps to create custome directives:
+    create directives from the CLI -- ng generate directives new-app
+    inject services ElementRef and Renderer
+    Rgister inside the module
+    Use your directives
+*
+HostElement
+constist of @HostBinding and @HostLister()
+Hostlistern- whenever you want to capture of Host Element you use Host listener
+HostBinding - if you want to capture property of your host element
+
+@HostBinding('style.border') border: string;
+@HostListener('mouseover') onmouseover(){
+    this.border = '10px solid blue';
+    this.changecolor('green')
+}
+
+* ng-template and ng-content and ng-container
+@link - https://www.freecodecamp.org/news/everything-you-need-to-know-about-ng-template-ng-content-ng-container-and-ngtemplateoutlet-4b7b51223691/
+ng-tempalte - As the name suggests the <ng-template> is a template element that Angular uses with structural directives (*ngIf, *ngFor, [ngSwitch] and custom directives).
+only work in the presence of structural directives
+ng-tempalte itself don't get rendered
+
+ng-container 
+    The reason why many of us write this code is the inability to use multiple structural directives on a single host element in Angular. 
+    The Angular <ng-container> is a grouping element that doesn't interfere with styles or layout because Angular doesn't put it in the DOM.
+    when we just want to apply multiple structural directives without introducing any extra element in our DOM.
+
+ng-content 
+    create configurable components -content projection,
+    multiple projection can be done
+
+*ngTemplateOutlet : 
+    They are used as a container to templates that can be reused at multiple places.
+    *ngTemplateOutlet is used for two scenarios — 
+        * to insert a common template in various sections of a view irrespective of loops or * condition  to make a highly configured component.
+
+
+ */
+
+
