@@ -2,10 +2,13 @@
   "name": "learnjs",
   "version": "1.0.0",
   "description": "Learning Js",
-  "main": "11_callback.js",
+  "main": "rxjs/index.js",
   "scripts": {
-    "start": "node 11_callback.js"
+    "start": "node main"
   },
   "author": "Sobhit Kumar",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "rxjs": "^7.3.1"
+  }
 }

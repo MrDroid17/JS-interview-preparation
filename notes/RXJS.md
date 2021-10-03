@@ -82,3 +82,201 @@ subscription.unsubscribe();
 
 > Type - Subject, Async Subject, Behaviour Subject and Reply Subject
 
+---
+<br>
+
+### Basic rxjs from maxmillian Youtube videos
+[Click here for playlist](https://www.youtube.com/watch?v=Tux1nhBPl_w&list=PL55RiY5tL51pHpagYcrN9ubNLVXF8rGVi)
+
+#### filter, map, throttleTime
+```js
+const button = document.querySelector('button');
+fromEvent(button, 'click')
+  .pipe(filter(data => data.clientX % 2 == 0 && data.clientY % 2 == 0))
+  .pipe(map(data => data.clientX + ', ' + data.clientY))
+  .pipe(throttleTime(1000))
+  .subscribe(e => console.log(e));
+```
+
+#### Example 2 - create a observerable
+```js
+of(1, 2, 3).pipe(map(x => x + '!!!')).subscribe(e => console.log(e));
+```
+
+### Observable, Observer and Subscription
+
+```js
+const button = document.querySelector('button');
+var observer = {
+  next: function (value) {
+    console.log(value);
+  },
+  error: function (error) {
+    console.log(error);
+  },
+  complete: function () {
+    console.log('Completed');
+  }
+}
+
+/**
+ * Store subscription in a variable and unscrine it
+ * to prevent memory leak
+ */
+var subscription = Observable.create(obs => {
+  // obs.next('A value');
+  // obs.complete();
+  // obs.next('A second value');
+  button.onclick = function (event) {
+    obs.next(event);
+  }
+}).subscribe(observer);
+
+setTimeout(function () {
+  subscription.unsubscribe()
+}, 5000)
+```
+
+### 3 interval, throttle, map
+
+```js
+var obs = interval(1000);
+var observer = {
+  next: function (value) {
+    console.log(value);
+  }
+}
+
+obs
+  .pipe(map(value => 'Number: ' + value))
+  .pipe(throttleTime(1900))
+  .subscribe(observer);
+```
+
+### renamed operator in rxjs 6
+```
+rename operators in rxjs major changes
+do()-- > tap()
+catch()-- > catchError()
+switch()-- > switchAll()
+finally()-- > finalize()
+throw()-- > throwError()
+```
+
+### Subject
+
+  Event Emitter - obs -- passive --  can not trigger emission of value. but in some cases you may not needed same value to emit. For these subjects can be used. subject has next method that is helpful.
+
+```js
+var subject = new Subject();
+
+subject.subscribe({
+  next: function (value) {
+    console.log(value);
+  },
+  error: function (error) {
+    console.log(error);
+  },
+  complete: function () {
+    console.log('Completed');
+  }
+})
+
+subject.subscribe({
+  next: function (value) {
+    console.log(value);
+  }
+})
+
+subject.next('A new data piece.');
+subject.complete();
+subject.next('a new value')
+```
+### debounceTime(), distinctUntilChanged()
+
+```js
+var input = document.querySelector('#input1');
+var observable = fromEvent(input, 'input');
+
+observable
+  .pipe(map(event => event?.target?.value)) // earlier pluck is being used for this but is deprecated now
+  .pipe(debounceTime(300))
+  .pipe(distinctUntilChanged())
+  .subscribe({
+    next: function (value) {
+      console.log(value);
+    }
+  })
+```
+
+### scan and reduce
+> reduce: A function that returns an Observable that emits a single value that is the result of accumulating the values emitted by the source Observable.
+>
+> scan: A function that returns an Observable of the accumulated values.
+
+  Important: reduce result the final value but scan return all the accumulated value at each step
+
+```js
+var observable = of(1, 2, 3, 4, 5);
+observable
+  // .pipe(reduce((total, currentValue) => total + currentValue))
+  .pipe(scan((total, currentValue) => total + currentValue))
+  .subscribe({
+    next: function (value) {
+      console.log(value);
+    }
+  })
+
+```
+
+### mergeMap()
+  only give result if both of the variable subscribed
+```js
+let input1 = document.querySelector('#input1');
+let input2 = document.querySelector('#input2');
+let span = document.querySelector('span');
+
+var obs1 = fromEvent(input1, 'input');
+var obs2 = fromEvent(input2, 'input');
+
+obs1.pipe(mergeMap(
+  event1 => {
+    return obs2.pipe(map(event2 => event1.target.value + ' ' + event2.target.value))
+  })
+).subscribe(
+  combinedValue => span.textContent = combinedValue
+)
+```
+
+### switchMap
+  Use one observable is dependent on another
+
+```js
+let button = document.querySelector('button');
+
+var obs1 = fromEvent(button, 'click');
+var obs2 = interval(1000);
+
+obs1
+  .pipe(switchMap(event => obs2))
+  .subscribe(value => console.log(value))
+```
+
+### Behaviour Subject 
+
+    A variant of Subject that requires an initial value and emits its current value whenever it is subscribed to.
+
+```js
+var clickEmitted = new BehaviorSubject('Not clicked.');
+var button = document.querySelector('button');
+var div = document.querySelector('div');
+
+button.addEventListener('click', () => clickEmitted.next('Clicked!'));
+
+clickEmitted.subscribe(
+  (value) => div.textContent = value
+);
+```
+
+
+

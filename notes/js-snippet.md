@@ -106,43 +106,7 @@ for(let i=0; i<4; i++){
 ---
 <br>
 
-#### #5 setImmediate 
-```js
-function myFunction(platform){
-    console.log("Hi, Welcome to " + platform);
-}
-
-console.log("Before the setImmediate call");
-let timerID = setImmediate(myFunction, "Educative");
-console.log("After the setImmediate call");
-
-for(let i=0; i<4; i++){
-    console.log("Iteration of loop: "+i);
-}
-```
-<details>
-  <summary>Show Answer</summary>
-
-> Before the setImmediate call
-> 
-> After the setImmediate call
->
-> Iteration of loop: 0
->
-> Iteration of loop: 1
->
-> Iteration of loop: 2
->
-> Iteration of loop: 3
->
-> Hi, Welcome to Educative
-> setImmediate() is to schedule the immediate execution of callback after I/O events callbacks and before setTimeout and setInterval .
-</details>
-
----
-<br>
-
-#### #6 
+#### #5
 ```js
 function welcome(name, message) {
   console.log(message + " "+ name);
@@ -168,7 +132,7 @@ welcome("Thor", "Hi");
 ---
 <br>
 
-#### #7
+#### #6
 ```js
 var a = 10;
 let b = function (){
@@ -181,6 +145,30 @@ b();
   <summary>Show Answer</summary>
 
 > undefined
+
+</details>
+
+---
+<br>
+
+#### #7 predict output
+```js
+for(var i = 1; i < 5; i++) {
+  setTimeout(() => {
+    console.log(i)
+  }, 1);
+}
+```
+<details>
+  <summary>Show Answer</summary>
+
+> 5
+>
+> 5
+>
+> 5
+>
+> 5
 
 </details>
 
