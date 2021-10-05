@@ -48,6 +48,32 @@
 * **video**: 	Specifies a video file.
 * **wbr**: 	Specifies a line break opportunity.
 
+## 4. Semantic non-semantic elements
+    A semantic element clearly describes its meaning to both the browser and the developer.
+
+```
+  * non-semantic elements - <div> and <span> - Tells nothing about its content.
+  * semantic elements - <form>, <table>, and <article> - Clearly defines its content.
+```
+
+some example of semantic tags:
+
+```
+<article>
+<aside>
+<details>
+<figcaption>
+<figure>
+<footer>
+<header>
+<main>
+<mark>
+<nav>
+<section>
+<summary>
+<time>
+```
+
 
 
 ## **CSS**

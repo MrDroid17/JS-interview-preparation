@@ -9,6 +9,5 @@
   "author": "Sobhit Kumar",
   "license": "ISC",
   "dependencies": {
-    "rxjs": "^7.3.1"
   }
 }

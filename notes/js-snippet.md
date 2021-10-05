@@ -175,5 +175,190 @@ for(var i = 1; i < 5; i++) {
 ---
 <br>
 
+#### #8 
+```js
+var output = (function(x) {
+  delete x;
+  return x;
+})(0);
+console.log(output);
+```
+<details>
+  <summary>Show Answer</summary>
+
+> 0
+>
+>> Important- delete operator is used to delete a property from an object.
+
+</details>
+
+---
+<br>
+
+#### #9 
+```js
+var x = { foo : 1};
+var output = (function() {
+  delete x.foo;
+  return x.foo;
+})();
+console.log(output);
+```
+<details>
+  <summary>Show Answer</summary>
+
+> undefined
+>
+>> Important- delete operator is used to delete a property from an object.
+
+</details>
+
+---
+<br>
+
+#### #10
+```js
+var Employee = {
+  company: 'xyz'
+}
+var emp1 = Object.create(Employee);
+delete emp1.company
+
+console.log(emp1.company);
+console.log(emp1.hasOwnProperty('company'));
+```
+<details>
+  <summary>Show Answer</summary>
+
+> xyz
+>
+>false
+>
+>> Important- emp1 object got company as prototype property. delete operator doesn't delete prototype property. emp1 object doesn't have company as its own property. you can test it
+console.log(emp1.hasOwnProperty('company')) will output false .
+
+</details>
+
+---
+<br>
+
+#### #11
+
+```js
+var trees = ["xyz", "xxxx", "test", "ryan", "apple"];
+delete trees[3];
+console.log(trees.length);
+```
+<details>
+  <summary>Show Answer</summary>
+
+> 5
+> 
+>> When we used delete operator for deleting an array element then, the array length is not affected by this.
+
+</details>
+
+---
+<br>
+
+#### #11
+
+```js
+var z = 1, y = z = typeof y;
+console.log(y);
+```
+<details>
+  <summary>Show Answer</summary>
+
+> undefined
+
+</details>
+
+---
+<br>
+
+#### #12
+
+```js
+// NFE (Named Function Expression)
+var foo = function bar() { return 12; };
+typeof bar();
+```
+<details>
+  <summary>Show Answer</summary>
+
+> Reference error
+
+</details>
+
+---
+<br>
+
+#### #13
+
+```js
+bar();
+(function abc(){console.log('something')})();
+function bar(){console.log('bar got called')};
+```
+<details>
+  <summary>Show Answer</summary>
+
+> bar got called
+>
+> something
+
+</details>
+
+---
+<br>
+
+#### #14
+
+What is constructor function? an Example.
+
+<details>
+  <summary>Show Answer</summary>
+
+```js
+function Employee(name, age) {
+this.name = name;
+this.age = age;
+}
+var emp1 = new Employee('John Doe', 28);
+emp1.name; // "John Doe"
+emp1.age; // 28
+```
+
+> Unlike function calls and method calls, a constructor call new Employee('John Doe', 28) creates a
+brand new object and passes it as the value of this , and implicitly returns the new object as its
+result.
+>
+> Important: primary role of the constructor function is to initialize the object.
+
+</details>
+---
+<br>
+
+#### #15
+
+```js
+function User(name) {
+this.name = name || "JsGeeks";
+}
+var person = new User("xyz")["location"] = "USA";
+console.log(person);
+```
+<details>
+  <summary>Show Answer</summary>
+
+>
+> "USA"
+
+</details>
+
+---
+<br>
+
 
 
