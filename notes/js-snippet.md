@@ -360,5 +360,56 @@ console.log(person);
 ---
 <br>
 
+#### #16  how to check if two object is equal
+
+```js
+const one = {
+  fruit: 'kiwi',
+  nutrients: {
+    energy: '255kJ',
+    minerals: {
+      name: 'calcium',
+    },
+  }
+};
+
+const two = {
+  fruit: 'kiwi',
+  nutrients: {
+    energy: '255kJ',
+    minerals: {
+      name: 'calcium',
+    },
+  },
+};
+```
+<details>
+  <summary>Show Answer</summary>
+
+>
+> JSON.stringify(one) ==JSON.stringify(two);
+>> for equality check order o key is also important
+
+</details>
+
+---
+<br>
+
+#### #17  
+```js
+
+```
+<details>
+  <summary>Show Answer</summary>
+
+>
+> JSON.stringify(one) ==JSON.stringify(two);
+>> for equality check order o key is also important
+
+</details>
+
+---
+<br>
+
 
 
