@@ -1,4 +1,4 @@
-### #Angualr pipe
+### #1 Angualr pipe
 
 > Pipe and PipeTransform from Angular core library
 ```typescript
@@ -10,7 +10,7 @@ export class toLowerCase implements PipeTransform{
 }
 ```
 
-### #Interceptor
+### #2 Interceptor
 
 > With interception, you declare interceptors that inspect and transform HTTP requests from your application to a server. The same interceptors can also inspect and transform a server's responses on their way back to the application. Multiple interceptors form a forward-and-backward chain of request/response handlers.> Pipe and PipeTransform from Angular core library
 > 
@@ -24,7 +24,7 @@ export class NoopInterceptor implements HttpInterceptor{
 }
 ```
 
-### # Sharing data between components
+### #3 Sharing data between components
 
 There are many ways:
 1. Parent to Child: Sharing Data via Input
@@ -88,4 +88,18 @@ export class SiblingComponent implements OnInit, OnDestroy {
 }
 ```
 [For details article read here](https://fireship.io/lessons/sharing-data-between-angular-components-four-methods/)
+
+
+
+### #4 is Angular Service Singleton ?
+
+    By default, when you create a service using the below CLI command, 
+
+> ng g s app
+
+  AppService is singleton, however it can be re-provided to create more objects of it. 
+
+  Say, you again re provide AppService in one of the components's providers, then Angular creates one more object of the AppService. 
+
+  (See detailed videos) [https://www.youtube.com/watch?v=vd-2VUC7jng]
 

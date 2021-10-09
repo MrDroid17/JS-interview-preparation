@@ -397,19 +397,58 @@ const two = {
 
 #### #17  
 ```js
-
+var a =10;
+var b = 20;
+[a, b] = [b,a]
+console.log(a, b);
 ```
 <details>
   <summary>Show Answer</summary>
 
 >
-> JSON.stringify(one) ==JSON.stringify(two);
->> for equality check order o key is also important
+> 20, 10      
+>> destructuring
+
+</details>
+
+
+#### #18
+```js
+console.log(bar());
+var bar = function(){
+    return 'ABC';
+}
+console.log(bar())
+```
+<details>
+  <summary>Show Answer</summary>
+
+>
+> TypeError: bar is not a function 
 
 </details>
 
 ---
 <br>
 
+#### #19
+```js
+console.log(bar);
+var bar = function(){
+    return 'ABC';
+}
+console.log(bar())
+```
+<details>
+  <summary>Show Answer</summary>
 
+>
+> Undefined
+>
+> ABC
+
+</details>
+
+---
+<br>
 
