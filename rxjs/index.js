@@ -40,3 +40,15 @@ button.addEventListener('click', () => clickEmitted.next('Clicked!'));
 clickEmitted.subscribe(
   (value) => div.textContent = value
 );
+
+function merge(toObj, fromObj) {
+  if (typeof toObj === 'object' && typeof fromObj === 'object') {
+    for (var pro in fromObj) {
+      if (fromObj.hasOwnProperty(pro)) {
+        toObj[pro] = fromObj[pro];
+      }
+    }
+  } else {
+    throw "Merge function can apply only on object";
+  }
+}
