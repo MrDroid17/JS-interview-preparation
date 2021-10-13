@@ -887,3 +887,86 @@ foo();
 ---
 <br>
 
+#### #38 sort this array in ascending order
+
+```js
+let abc = [{num: 5}, {num: 2}, {num: 1}, {num: 6}];
+```
+
+<details>
+  <summary>Show Answer</summary>
+
+```js
+let abc = [{num: 5}, {num: 2}, {num: 1}, {num: 6}];
+ abc = abc.sort(function(a, b) {
+    return a.num - b.num;
+});
+
+console.log(abc);
+```
+</details>
+
+---
+<br>
+
+#### #39 fix the code using callback
+
+below example  is not giving desired output. instead of giving output it is returning undeined. Use call back to fix this.
+
+```js
+function getEven(input){
+    let output = "";
+    setTimeout(() =>{
+        if(input % 2 ===0){
+            output = 'even';
+        }else {
+            output = 'odd'
+        }
+    })
+    return output;
+}
+console.log(getEven(3))
+```
+
+<details>
+  <summary>Show Answer</summary>
+
+```js
+function getEven(input, cb){
+    let output = "";
+    setTimeout(() =>{
+        if(input % 2 ===0){
+            output = 'even';
+        }else {
+            output = 'odd'
+        }
+        cb(output)
+    })
+}
+console.log(getEven(3, (result)=> console.log(result)))
+```
+</details>
+
+---
+<br>
+
+#### #39 
+
+```js
+0.1 + 0.2 === 0.3
+```
+
+<details>
+  <summary>Show Answer</summary>
+
+> false   --- b/c of floating point errors
+>
+> Explanation: floating point errors in internally representing certain
+numbers. 0.1 + 0.2 does not nicely come out to 0.3 but instead the result is actually
+0.30000000000000004 because the computer cannot internally represent the correct number. One
+solution to get around this problem is to round the results when doing arithmetic with decimal
+numbers.
+</details>
+
+---
+<br>

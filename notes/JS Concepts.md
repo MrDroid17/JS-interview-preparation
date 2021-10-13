@@ -1,4 +1,4 @@
-## This in JS
+##  #1 This in JS
 
     Object that is executing current function;
     by default refer global object.
@@ -9,7 +9,7 @@
     in forEach can also maintained
     [click here for videos](https://www.youtube.com/watch?v=Pi3QC_fVaD0)
 
-## What is non-enumerable property in JavaScript and how you can create one?
+## #2 What is non-enumerable property in JavaScript and how you can create one?
 
 Object can have properties that don't show up when you iterate through object using for...in loop
 or using Object.keys() to get an array of property names. This properties is know as nonenumerable
@@ -29,7 +29,7 @@ Object.defineProperty(person, 'phoneNo',{
 Object.keys(person); // ['name', 'salary', 'country']
 ```
 
-## function binding
+## #3 function binding
 
 Function binding falls in advance JavaScript category and this is very popular technique to use in
 conjunction with event handler and callback function to preserve code execution context while
@@ -46,6 +46,20 @@ var btn = document.getElementById('myBtn');
 // Add click event to btn
 btn.addEventListener('click', clickHandler.handleClick);
 ```
+
+## #4 Primitive and non-primitive data types
+
+list of data types that JavaScript can have: (7 types)
+
+    Primitive Data types:
+        refers to single value   
+        Number, String, Boolean, Undefined, Null and Symbol.
+
+    Non-Primitive data type: 
+        The ‘object’ is a non-primitive data type in JavaScript. Arrays and Functions in JavaScript belong to the ‘object’ data type.
+        Object
+
+[Click to read more](https://www.edureka.co/blog/data-types-in-javascript/)
 
 
 

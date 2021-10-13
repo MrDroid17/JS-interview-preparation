@@ -103,3 +103,28 @@ export class SiblingComponent implements OnInit, OnDestroy {
 
   (See detailed videos) [https://www.youtube.com/watch?v=vd-2VUC7jng]
 
+
+### #5 AsyncPipes
+
+The async pipe subscribes to an Observable or Promise and returns the latest value it has emitted. When a new value is emitted, the async pipe marks the component to be checked for changes. When the component gets destroyed, the async pipe unsubscribes automatically to avoid potential memory leaks.
+
+
+### #6 Safe navigation
+The Angular safe navigation operator, ? , guards against null and undefined values in property paths. Here, it protects against a view render failure if item is null .
+
+
+### #7 Ahead-of-time (AOT) compilation
+
+An Angular application consists mainly of components and their HTML templates. Because the components and templates provided by Angular cannot be understood by the browser directly, Angular applications require a compilation process before they can run in a browser.
+
+The Angular ahead-of-time (AOT) compiler converts your Angular HTML and TypeScript code into efficient JavaScript code during the build phase before the browser downloads and runs that code. Compiling your application during the build process provides a faster rendering in the browser.
+
+### #8 Ngrx  == rxjs and redux
+  Store is RxJS powered global state management for Angular applications, inspired by Redux. Store is a controlled state container designed to help write performant, consistent applications on top of Angular.
+
+    * Actions describe unique events that are dispatched from components and services.
+    * State changes are handled by pure functions called reducers that take the current state and the latest action to compute a new state.
+    * Selectors are pure functions used to select, derive and compose pieces of state.
+    * State is accessed with the Store, an observable of state and an observer of actions.
+
+![Broken image](https://ngrx.io/generated/images/guide/store/state-management-lifecycle.png)
