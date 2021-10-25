@@ -62,7 +62,18 @@ list of data types that JavaScript can have: (7 types)
 [Click to read more](https://www.edureka.co/blog/data-types-in-javascript/)
 
 
+#### Iterators and generators
+Iterators and Generators bring the concept of iteration directly into the core language and provide a mechanism for customizing the behavior of for...of loops.
 
+Iterator:
+In JavaScript an iterator: an object which defines a sequence and potentially a return value upon its termination.
+having a next() method that returns an object with two properties:
+value and done
+
+
+
+
+[Read in details](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
 
 
      

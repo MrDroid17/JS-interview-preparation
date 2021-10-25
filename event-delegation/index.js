@@ -1,7 +1,7 @@
 /**
  * @link https://www.youtube.com/watch?v=3KJI1WZGDrg&list=PLlasXeu85E9eLVlWFs-nz5PKXJU4f7Fks
  * 
- * event event Delegation
+ * event event Delegation  only possible because of bubbling back
  * behaviour pattern can also be achieved by event Delegation
  *pros:
   1. memory efficient - also mitigate the risk of performance bottleneck

@@ -99,6 +99,9 @@ some example of semantic tags:
   * absolute - positioned relative to the nearest positioned ancestor (instead of positioned relative to the viewport, like fixed).
   * sticky - position: sticky; is positioned based on the user's scroll position.
 
+
+## 3. Pseudo class
+
 For more details : [CSS Position](https://www.w3schools.com/css/css_positioning.asp)
 
 > For CSS Interview Questions 30+ : [click here](https://www.interviewbit.com/css-interview-questions/)
