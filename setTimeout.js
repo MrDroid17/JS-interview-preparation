@@ -1,16 +1,16 @@
 /**
  * #1 setTimeout trust issues
- * setTimeOut will only execute once callstack is empty  and afte 5000 millis
+ * setTimeOut will only execute once callstack is empty  and afte 5000 millis in below example
  * concurrency model in javascript
  * 
  */
 
-// console.time('timer');
-// console.log("Start");
-// setTimeout(function cb(){
-//     console.log("Callback");
-// }, 5000);
-// console.log("End");
+console.time('timer');
+console.log("Start");
+setTimeout(function cb(){
+    console.log("Callback");
+}, 5000);
+console.log("End");
 
 // let startDate = new Date().getTime();
 // let endDate = startDate;
@@ -26,11 +26,11 @@
 /**
  * #2  with 0 timer
  */
-// console.log("Start");
-// setTimeout(function cb(){
-//     console.log("Callback");
-// }, 0)
-// console.log("End");   
+console.log("Start");
+setTimeout(function cb(){
+    console.log("Callback");
+}, 0)
+console.log("End");   
 
 
 
@@ -72,18 +72,18 @@ x();
  *  loop with setTimeout
  * issue with below example because of closure will remeber latest value
  */
-//  function x(){
-//     for (var i=1; i<= 5; i++){
-//         function close(x){
-//             setTimeout(function (){
-//                 console.log(x);
-//             }, x*1000);
-//         }
-//         close(i);
-//     }
-//     console.log("Namaste JavaScript");
-// }
+ function x(){
+    for (var i=1; i<= 5; i++){
+        function close(x){
+            setTimeout(function (){
+                console.log(x);
+            }, x*1000);
+        }
+        close(i);
+    }
+    console.log("Namaste JavaScript");
+}
 
-// x();
+x();
 
 
