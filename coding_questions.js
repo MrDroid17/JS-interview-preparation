@@ -131,3 +131,31 @@ getLargestPairSum(arr_of_number);
 let sum = a => b => b ? sum(a + b) : a;
 
 console.log(sum(10)(20)(3)(4)());
+
+
+/**
+Write a function to return all the name key from nested object in an array
+*/
+
+
+const obj = {
+  "name": "a",
+  "children": {
+    "name": "b",
+    "children": {
+      "name": "c",
+      "children": null
+    }
+  }
+}
+
+console.log(processObj(obj));
+
+function processObj(obj1, arr = []){
+  arr.push(obj1.name);
+  if(obj1.children)
+    processObj(obj1.children, arr)
+   return arr;
+}
+
+
