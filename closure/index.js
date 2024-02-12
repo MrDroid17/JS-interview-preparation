@@ -1,5 +1,8 @@
 /**
- * #1
+ * #1  Defination: Closure in JavaScript is a form of lexical scoping used to preserve variables from the outer scope of 
+a function in the inner scope of a function. Lexical scoping is the process used to define the scope of a 
+variable by its position in the source code.
+
  * Closure example
  * 
  * use of Closure
