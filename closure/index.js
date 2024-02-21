@@ -1,6 +1,8 @@
 /**
  * #1  Defination: Closure in JavaScript is a form of lexical scoping used to preserve variables from the outer scope of 
-a function in the inner scope of a function. Lexical scoping is the process used to define the scope of a 
+a function in the inner scope of a function. 
+
+Lexical scoping is the process used to define the scope of a 
 variable by its position in the source code.
 
  * Closure example
@@ -66,7 +68,7 @@ z(); // this will output in 100 //  b wont be garbage collected
         * Allocate the memory you need
         * Use the allocated memory (read, write)
         * Release the allocated memory when it is not needed anymore
-        *
+        
     Release when the memory is not needed anymore
 
     MEMORY MANAGEMENT:
@@ -74,7 +76,9 @@ z(); // this will output in 100 //  b wont be garbage collected
 
       Low-level languages require the developer to manually determine at which point in the program the allocated memory is no longer needed and to release it.
 
-      Some high-level languages, such as JavaScript, utilize a form of automatic memory management known as garbage collection (GC). The purpose of a garbage collector is to monitor memory allocation and determine when a block of allocated memory is no longer needed and reclaim it. This automatic process is an approximation since the general problem of determining whether or not a specific piece of memory is still needed is undecidable.
+      Some high-level languages, such as JavaScript, utilize a form of automatic memory management known as garbage collection (GC). The purpose of a garbage collector 
+      is to monitor memory allocation and determine when a block of allocated memory is no longer needed and reclaim it. This automatic process is an approximation since 
+      the general problem of determining whether or not a specific piece of memory is still needed is undecidable.
 
  */
 
